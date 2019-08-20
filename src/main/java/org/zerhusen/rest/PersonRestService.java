@@ -26,7 +26,7 @@ public class PersonRestService {
     @RequestMapping(path = "/persons/{name}", method = RequestMethod.GET)
     public static Person getPerson(@PathVariable("name") String name) {
         return persons.stream()
-                .filter(person -> name.equalsIgnoreCase(person.getName()))
-                .findAny().orElse(null);
+            .filter(person -> name.equalsIgnoreCase(person.getName()))
+            .findAny().orElse(null);
     }
 }

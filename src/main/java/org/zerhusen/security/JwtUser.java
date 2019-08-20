@@ -1,12 +1,11 @@
 package org.zerhusen.security;
 
-import java.util.Collection;
-import java.util.Date;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Collection;
+import java.util.Date;
 
 /**
  * Created by stephan on 20.03.16.
@@ -24,14 +23,14 @@ public class JwtUser implements UserDetails {
     private final Date lastPasswordResetDate;
 
     public JwtUser(
-          Long id,
-          String username,
-          String firstname,
-          String lastname,
-          String email,
-          String password, Collection<? extends GrantedAuthority> authorities,
-          boolean enabled,
-          Date lastPasswordResetDate
+        Long id,
+        String username,
+        String firstname,
+        String lastname,
+        String email,
+        String password, Collection<? extends GrantedAuthority> authorities,
+        boolean enabled,
+        Date lastPasswordResetDate
     ) {
         this.id = id;
         this.username = username;
